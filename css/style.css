@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* 定义盒子模型，设置元素的宽度不会因为设置padding/border改变 */
+    box-sizing: border-box;
+}
+/* 设置body的背景颜色 */
+body{
+    background: rgba(47, 47, 47, 0.2);
+}
+
+.main{
+    width: 375px;
+    /* pointer-events: none; */
+}
+
+/* 设置头部header样式 */
+/* 设为弹性容器  display: flex;*/
+.header{
+    width: 375px;
+    height: 50px;
+    background: rgba(47, 47, 47, 0.98);
+    /* 弹性容器 */
+    display: flex;
+}
+
+.header .logo{
+    color: #fff;
+    width: 100px;
+    font-size: 19px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.header .input{
+    color: #fff;
+    width: 275px;
+    /* 弹性容器 */
+    display: flex;
+    /* 主轴方向 */
+    justify-content: center;
+    /* 侧轴方向 */
+    align-items: center;
+}
+
+.header .input input{
+    border: none;
+    outline: none;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    
+}
+
+/* > ：直接子元素的选择器的写法 */
+.list>h1{
+    margin: 20px;
+    font-size: 20px;
+    /* 设为弹性容器 */
+    display: flex;
+    /* 设置子元素平均分布 space-between向两边靠*/
+    justify-content: space-between;
+}
+
+/* 设置span的num样式*/
+.todo>h1 .num{
+    width: auto;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 15px; 
+    background:deeppink;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+.done>h1 .num{
+    width: auto;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 15px;
+    background-color: forestgreen;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+.done .clist .item{
+    background: rgba(0, 0, 0, 0.1);
+}
+/* 
+.done .clist .item .checkbox .ipt_cbox{
+    /* background: rgba(0, 0, 0, 0.2); 
+    background: red;
+} */
+
+.done .clist .item::before{
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: darkviolet;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.item{
+    margin: 10px 20px;
+    /* 弹性容器 */
+    display: flex;
+    /* 侧轴方向 */
+    align-items: center;
+    /* 平均分布 */
+    justify-content: space-between;
+    /* 样式 */
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px 10px;
+    position: relative;
+}
+
+/* 伪元素 */
+.todo .clist .item::before{
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: greenyellow;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.item .checkbox{
+    display: flex;
+    align-items: center;
+    
+}
+
+/* item下面的checkbox的input*/
+.item .checkbox input{
+    width: 22px;
+    height: 22px;
+    outline: none;
+}
+
+.item .content{
+    padding:0px 5px;
+    width: 265px;
+    line-height: 22px;
+    /* span标签内容超过宽度自动换行 */
+    word-break: break-all;
+    
+}
+
+.item .delete{
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    background-image: url("../img/delete.png");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

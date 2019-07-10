@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>备忘录案例</title>
+    <!-- 
+        移动端的
+     -->
+    <!-- 导入css文件 -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- 设置为移动端的width user-scalable 不允许用户更改-->
+    <meta name="viewport" content="width=375,user-scalable=no">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">TodoList</div>
+        <div class="input">
+            <input type="text" name="write" id="write" placeholder="请输入待办事项" value="">
+        </div>
+        
+    </div>
+    <div class="main">
+        <div class="list todo">
+            <h1>
+                <div class="title">正在进行</div>
+                <span class="num">0</span>
+            </h1>
+            <div class="clist">
+                <div class="item">
+                    <span class="checkbox">
+                        <input class="ipt_cbox" type="checkbox" name="check" id="" value="">
+                    </span>
+                    <span class="content"></span>
+                    <span class="delete"></span>
+                </div>    
+            </div>
+        </div>
+        <div class="list done">               
+            <h1>
+                <div class="title">已经完成</div>
+                <span class="num">0</span>
+            </h1>    
+            <div class="clist"></div>
+        </div>
+    </div>
+    
+    <!-- 导入js文件 -->
+    <script src="js/Todo.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
